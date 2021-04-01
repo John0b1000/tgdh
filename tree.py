@@ -18,7 +18,7 @@ from collections import deque
 import matplotlib.pyplot as plt
 import pickle
 class Tree(object):
-    def __init__(self,maxSize = 10000):
+    def __init__(self,maxSize = 30000):
         
         self.root = Node(0,self)
         
@@ -122,7 +122,7 @@ for i in range(NUM_NODES):
         print(i)
         y.append(end - start)
         x.append(i)
-print(tree.verifyTreeIntegrity())
+# print(tree.verifyTreeIntegrity())
 data=[x,y]
 file=open("insertion_time","wb")
 pickle.dump(data,file)
@@ -143,7 +143,7 @@ for i in range(NUM_NODES):
         y.append(end - start)
         x.append(NUM_NODES-(i+1))
     
-print(tree.verifyTreeIntegrity())
+# print(tree.verifyTreeIntegrity())
 data=[x,y]
 file=open("deletion_time","wb")
 pickle.dump(data,file)

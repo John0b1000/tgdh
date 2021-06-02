@@ -5,9 +5,6 @@ class Node(object):
     p = number.getPrime(2048)
     def __init__(self,id,tree):
         self.id = id
-        # self.left = None
-        # self.right = None
-        # self.parent = None
         self.key = randint(1,int(Node.p-1))
         self.bKey = pow(Node.g,self.key,Node.p)
         self.isLeaf = True
@@ -16,6 +13,10 @@ class Node(object):
         return self.tree.left(self)
     def right(self):
         return self.tree.right(self)
+    def isLeftChild(self):
+        return self.parent().left()==self
+    def isRightChild(self):
+        return self.parent().right()==self
     def parent(self):
         return self.tree.parent(self)
     def setLeft(self,node):

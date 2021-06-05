@@ -147,7 +147,7 @@ class Tree(object):
         return output
 
 def insert_delete():
-    NUM_NODES=10000 
+    NUM_NODES=1000 
     tree = Tree()
     y = []
     x = []

@@ -42,7 +42,7 @@ class gdh :
             
 
 
-NUM_NODES=10000
+NUM_NODES=1000
 y = []
 x = []
 id_queue = deque()

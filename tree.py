@@ -15,7 +15,7 @@ assign groups
 from Node import Node
 import time
 from collections import deque
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import pickle
 class Tree(object):
     def __init__(self,maxSize = 30000):
@@ -164,11 +164,11 @@ def insert_delete():
     file=open("insertion_time","wb")
     pickle.dump(data,file)
     file.close()
-    plt.plot(x,y,"o-")
-    plt.xlabel("Number of users")
-    plt.ylabel("Time for insertion(sec)")
-    plt.savefig("./insertion_time_plot.png")
-    plt.clf()
+    #plt.plot(x,y,"o-")
+    #plt.xlabel("Number of users")
+    #plt.ylabel("Time for insertion(sec)")
+    #plt.savefig("./insertion_time_plot.png")
+    #plt.clf()
     x=[]
     y=[]
     for i in range(NUM_NODES):
@@ -185,22 +185,24 @@ def insert_delete():
     file=open("deletion_time","wb")
     pickle.dump(data,file)
     file.close()
-    plt.plot(x,y,"o-")
-    plt.xlabel("Number of users")
-    plt.ylabel("Time for deletion(sec)")
-    plt.savefig("./deletion_time_plot.png")
-    plt.show()
+    #plt.plot(x,y,"o-")
+    #plt.xlabel("Number of users")
+    #plt.ylabel("Time for deletion(sec)")
+    #plt.savefig("./deletion_time_plot.png")
+    #plt.show()
 
 
 
 # NUM_NODES=10 
-# tree = Tree()
-# for i in range(NUM_NODES):
-#     tree.insertNewUser()
-# print(tree.verifyTreeIntegrity())
-# print(tree)
+import sys
+NUM_NODES = int(sys.argv[1])-1
+tree = Tree()
+for i in range(NUM_NODES):
+   tree.insertNewUser()
+print(tree.verifyTreeIntegrity())
+print(tree)
 # tree.swapUsers()
 # print(tree.verifyTreeIntegrity())
 # print(tree)
 
-insert_delete()
+#insert_delete()

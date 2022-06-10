@@ -14,11 +14,11 @@ tree = Tree()
 
 # add the proper number of members
 #
+print("")
+print("Generating binary tree with " + sys.argv[1] + " nodes ...\n")
 for i in range(NUM_NODES):
    tree.insertNewUser()
     
 # print the tree
 #
-print("")
-print("Generating binary tree with " + sys.argv[1] + " nodes ...\n")
 print(tree)

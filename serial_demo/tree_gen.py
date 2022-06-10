@@ -6,7 +6,7 @@ import sys
 
 # determine the number of nodes
 #
-NUM_NODES = int(sys.argv[2])-1
+NUM_NODES = int(sys.argv[1])-1
 
 # instantiate the Tree class
 #

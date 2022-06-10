@@ -20,5 +20,5 @@ for i in range(NUM_NODES):
 # print the tree
 #
 print("")
-print("Generating binary tree with " + sys.argv[2] + " nodes ...\n")
+print("Generating binary tree with " + sys.argv[1] + " nodes ...\n")
 print(tree)
